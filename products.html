@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - UnityBazzar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Unity<span>Bazzar</span></h1>
+                    <p class="tagline">Shop Local, Shine Global</p>
+                </div>
+                
+                <nav class="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="products.html" class="nav-link active">Categories</a>
+                    <a href="#offers" class="nav-link">Offers</a>
+                    <a href="cart.html" class="nav-link">Cart <span class="cart-count" id="cartCount">0</span></a>
+                    <a href="#account" class="nav-link"><i class="fas fa-user"></i> Account</a>
+                </nav>
+                
+                <div class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for products...">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Page -->
+    <section class="products-page">
+        <div class="container">
+            <h1 class="page-title">Our Products</h1>
+            
+            <div class="products-layout">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <h3>Filters</h3>
+                    
+                    <div class="filter-group">
+                        <h4>Category</h4>
+                        <label><input type="checkbox" class="category-filter" value="Handicrafts"> Handicrafts</label>
+                        <label><input type="checkbox" class="category-filter" value="Textiles"> Textiles</label>
+                        <label><input type="checkbox" class="category-filter" value="Home Decor"> Home Decor</label>
+                        <label><input type="checkbox" class="category-filter" value="Traditional Wear"> Traditional Wear</label>
+                        <label><input type="checkbox" class="category-filter" value="Jewelry"> Jewelry</label>
+                    </div>
+                    
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+                        <label><input type="radio" name="price" class="price-filter" value="0-500"> Under ₹500</label>
+                        <label><input type="radio" name="price" class="price-filter" value="500-1000"> ₹500 - ₹1000</label>
+                        <label><input type="radio" name="price" class="price-filter" value="1000-2000"> ₹1000 - ₹2000</label>
+                        <label><input type="radio" name="price" class="price-filter" value="2000-5000"> ₹2000 - ₹5000</label>
+                        <label><input type="radio" name="price" class="price-filter" value="5000+"> Above ₹5000</label>
+                    </div>
+                    
+                    <button class="btn-secondary" id="clearFilters">Clear All</button>
+                </aside>
+                
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-toolbar">
+                        <p class="results-count">Showing <span id="resultsCount">0</span> products</p>
+                        
+                        <div class="sort-options">
+                            <label for="sortSelect">Sort by:</label>
+                            <select id="sortSelect">
+                                <option value="popularity">Popularity</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="rating">Rating</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="product-grid" id="productsGrid"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>UnityBazzar</h3>
+                    <p>Empowering local businesses and artisans across Bharat</p>
+                    <p class="made-in-bharat">Made with ❤️ in Bharat</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="products.html">Handicrafts</a></li>
+                        <li><a href="products.html">Textiles</a></li>
+                        <li><a href="products.html">Home Decor</a></li>
+                        <li><a href="products.html">Traditional Wear</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Connect With Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 UnityBazzar. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
